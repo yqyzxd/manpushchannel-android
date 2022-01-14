@@ -1,0 +1,43 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.yqyzxd'
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 26
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+
+
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    //api(name: 'com.heytap.msp-push-2.1.0', ext: 'aar')
+    //引入极光-华为插件，如果采用此配置，无需拷贝jpush-android-plugin-huawei-v3.x.x.jar文件，也无需配置cn.jpush.android.service.PluginHuaweiPlatformsService组件
+    //注7：JPush Android SDK 3.5.4 更新华为HMS SDK版本为:3.0.3.301
+    //注7：JPush Android SDK 3.6.0 更新华为HMS SDK版本为:4.0.2.300
+    api 'cn.jiguang.sdk.plugin:huawei:4.0.6'
+    //api 'cn.jiguang.sdk.plugin:vivo:4.0.6'
+    //api 'cn.jiguang.sdk.plugin:oppo:4.0.6'
+    //api 'cn.jiguang.sdk.plugin:xiaomi:3.8.6'//版本号和对应的JPush版本号相同
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
