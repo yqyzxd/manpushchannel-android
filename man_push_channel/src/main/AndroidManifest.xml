@@ -5,22 +5,7 @@
 
     <application>
 
-       <meta-data
-            android:name="XIAOMI_APPKEY"
-            android:value="MI-5761740438485" />
 
-        <meta-data
-            android:name="XIAOMI_APPID"
-            android:value="MI-2882303761517404485" />
-
-         <meta-data android:name="OPPO_APPKEY"
-            android:value="OP-2321260" />
-
-        <meta-data android:name="OPPO_APPID"
-            android:value="OP-47rC0y88N6as8wgg80c4w88gc" />
-
-        <meta-data android:name="OPPO_APPSECRET"
-            android:value="OP-44a49406096afB15dF2DbA4F9F23fa49" />
     </application>
 
 </manifest>
