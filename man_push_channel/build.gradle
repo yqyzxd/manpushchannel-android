@@ -34,9 +34,9 @@ dependencies {
     //注7：JPush Android SDK 3.5.4 更新华为HMS SDK版本为:3.0.3.301
     //注7：JPush Android SDK 3.6.0 更新华为HMS SDK版本为:4.0.2.300
     api 'cn.jiguang.sdk.plugin:huawei:4.6.6'
-    api 'cn.jiguang.sdk.plugin:vivo:4.6.6'
+    /*api 'cn.jiguang.sdk.plugin:vivo:4.6.6'
     api 'cn.jiguang.sdk.plugin:oppo:4.6.6'
-    api 'cn.jiguang.sdk.plugin:xiaomi:4.6.6'//版本号和对应的JPush版本号相同
+    api 'cn.jiguang.sdk.plugin:xiaomi:4.6.6'*///版本号和对应的JPush版本号相同
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
